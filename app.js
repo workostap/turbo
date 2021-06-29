@@ -180,8 +180,14 @@ const rrr = async () => {
       });
 }
 
-function callApiEveryNSeconds(n) {
-  setInterval(rrr, n * 1000);
-}
+// function callApiEveryNSeconds(n) {
+//   setInterval(rrr, n * 1000);
+// }
 rrr()
-callApiEveryNSeconds(300);
+
+var cron = require('node-cron');
+
+var task = cron.schedule('* * * * *', () =>  {
+  rrr();
+  console.log('cron')
+});

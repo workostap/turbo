@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -13,6 +13,7 @@
     "http-errors": "~1.6.3",
     "mongoose": "^5.12.12",
     "morgan": "~1.9.1",
+    "node-cron": "^3.0.0",
     "node-fetch": "^2.6.1",
     "pug": "2.0.0-beta11"
   }
